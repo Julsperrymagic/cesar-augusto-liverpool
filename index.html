@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#c8e7fb">
+<meta name="description" content="Baby Shower de César Augusto. Invitación interactiva corta, tierna y elegante.">
+<meta property="og:title" content="Baby Shower de César Augusto">
+<meta property="og:description" content="Una invitación tierna e interactiva para celebrar a nuestro pequeño emperador.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/portada_cesar_augusto.png">
+<title>Baby Shower de César Augusto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#d8efff;--cream:#fffdfa;--gold:#c89843;--gold-deep:#9e6c22;--ink:#4b6a84;--ink2:#35536f;--shadow:0 20px 48px rgba(79,123,164,.16)}
+*{box-sizing:border-box} html,body{margin:0} body{font:600 16px/1.5 'Nunito',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#d7efff 0%,#eaf7ff 44%,#fff8ef 100%);min-width:320px;overflow-x:hidden} body.no-scroll{overflow:hidden}
+a{color:inherit;text-decoration:none} button,input,textarea{font:inherit} button{cursor:pointer;border:0} img{max-width:100%;display:block} :focus-visible{outline:3px solid #b67c26;outline-offset:3px} .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.page-sky{position:fixed;inset:0;pointer-events:none;z-index:-3;background:radial-gradient(circle at 12% 16%,rgba(255,246,231,.95),transparent 26%),radial-gradient(circle at 87% 16%,rgba(255,229,236,.75),transparent 24%),radial-gradient(circle at 14% 78%,rgba(241,231,255,.8),transparent 28%),linear-gradient(160deg,#bfe4fb 0%,#e8f6ff 43%,#fff7ec 100%)}
+.page-sky:before,.page-sky:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.55);filter:blur(16px)}
+.page-sky:before{width:280px;height:90px;left:-40px;top:90px} .page-sky:after{width:230px;height:74px;right:-30px;top:160px}
+#stars{position:fixed;inset:0;pointer-events:none;z-index:8;overflow:hidden} .star{position:absolute;color:#e4b961;opacity:.75;text-shadow:0 0 8px rgba(255,255,255,.9);animation:twinkle var(--tw,4.8s) ease-in-out infinite, floaty var(--fl,11s) ease-in-out infinite alternate} @keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.82;transform:scale(1.12)}} @keyframes floaty{to{transform:translateY(-12px) translateX(10px)}}
+
+#musicToggle{position:fixed;right:14px;top:max(12px,env(safe-area-inset-top));z-index:30;border-radius:999px;padding:10px 14px;background:rgba(255,255,250,.88);color:#4b7094;border:1px solid rgba(255,255,255,.85);box-shadow:0 8px 24px rgba(80,119,155,.15);backdrop-filter:blur(10px);font-size:13px;font-weight:800} #musicToggle .note{display:inline-block;margin-right:4px} #musicToggle[aria-pressed="true"] .note{animation:beat 1.1s infinite} @keyframes beat{50%{transform:scale(1.15) rotate(-10deg)}}
+
+#opening{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 50% 18%,#fffdf8 0%,#f7fbff 30%,#dbefff 64%,#c7e2fb 100%);transition:opacity .8s ease, visibility .8s ease}
+#opening::before{content:"";position:absolute;inset:0;background:url("assets/portada_cesar_augusto.png") center/auto 100% no-repeat;filter:blur(18px) saturate(.86);opacity:.42;transform:scale(1.03)}
+.door{position:absolute;top:-2%;bottom:-2%;width:50.5%;z-index:2;overflow:hidden;background:repeating-linear-gradient(90deg,transparent 0 8%,rgba(113,68,15,.085) 8.6% 9%,transparent 9.6% 18%),linear-gradient(105deg,#c89e55 0%,#f8e7b4 10%,#d5aa62 26%,#fbe4a7 48%,#bf8d43 70%,#f1d58f 88%,#a8752f 100%);box-shadow:inset 0 0 0 9px #b47d2f,inset 0 0 0 13px #fce8b0,inset 0 0 0 17px #ab7831,0 10px 35px rgba(61,54,33,.22)}
+.door.left{left:0;transform-origin:left center;border-radius:0 16px 16px 0} .door.right{right:0;transform-origin:right center;border-radius:16px 0 0 16px}
+.door:before{content:"";position:absolute;inset:6% 10%;border:4px double #a97527;border-radius:90px 90px 15px 15px;box-shadow:inset 0 0 0 5px rgba(255,255,221,.38),0 0 0 3px rgba(255,255,240,.28)}
+.door:after{content:"❧";position:absolute;top:25%;left:50%;transform:translateX(-50%);font:500 clamp(84px,12vw,170px)/1 Georgia,serif;color:#faefc3;text-shadow:0 3px 4px #956319,0 -1px 2px #fff;opacity:.9}
+.crest{position:absolute;top:43%;left:50%;transform:translate(-50%,-50%);width:clamp(92px,15vw,170px);aspect-ratio:1;border-radius:50%;border:6px double #fff3c2;background:radial-gradient(circle,#ffebac,#bb8841);box-shadow:0 0 0 5px #bc8436,0 12px 18px rgba(71,49,24,.18);display:grid;place-items:center;font-size:clamp(46px,8vw,96px);color:#fff8db;text-shadow:0 3px 7px #906322}
+.door.left .crest{left:62%} .door.right .crest{left:38%}
+.open-card{position:relative;z-index:4;width:min(90vw,510px);padding:34px 26px;border-radius:34px;background:rgba(255,253,248,.92);border:1px solid rgba(255,255,255,.95);box-shadow:0 25px 70px rgba(99,136,168,.18);text-align:center;backdrop-filter:blur(10px)}
+.open-card .crown{display:block;font-size:34px;color:#d2a44b;margin-bottom:8px} .open-kicker{text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:800;color:#9a865d;margin-bottom:10px} .open-card h1{font:700 clamp(34px,6vw,52px)/1.06 'Playfair Display',serif;color:#51779a;margin:0 0 12px} .open-card p{margin:0 0 18px;color:#7d8795} .open-card .gentle{display:block;font-size:12px;color:#8b8b81;margin-top:11px}
+.open-button{padding:14px 26px;border-radius:999px;background:linear-gradient(180deg,#efc56a,#daa347);color:white;font-weight:800;letter-spacing:.02em;box-shadow:0 6px 0 #c39239,0 10px 24px rgba(173,121,42,.28);transition:transform .2s,box-shadow .2s} .open-button:active{transform:translateY(3px);box-shadow:0 3px 0 #c39239,0 8px 16px rgba(173,121,42,.22)}
+#opening.open .left{animation:doorOpenLeft 1.9s cubic-bezier(.62,0,.2,1) forwards} #opening.open .right{animation:doorOpenRight 1.9s cubic-bezier(.62,0,.2,1) forwards} #opening.open .open-card{opacity:0;transform:scale(1.08);transition:opacity .45s ease,transform .45s ease;pointer-events:none} @keyframes doorOpenLeft{to{transform:perspective(1300px) rotateY(-96deg) translateX(-12px)}} @keyframes doorOpenRight{to{transform:perspective(1300px) rotateY(96deg) translateX(12px)}} #opening.gone{opacity:0;visibility:hidden;pointer-events:none}
+
+main{min-height:100svh;display:grid;place-items:center;padding:72px 14px 14px;opacity:0;transform:translateY(16px);transition:opacity .8s ease, transform .8s ease} main.visible{opacity:1;transform:none}
+.hero{width:min(100%,760px);text-align:center;position:relative} .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.9);box-shadow:0 10px 24px rgba(93,129,163,.1);font-size:13px;color:#7090ad;margin-bottom:14px}
+.poster-container{position:relative;width:min(100%,650px);margin:auto;border-radius:38px;overflow:hidden;background:#fff6e9;box-shadow:0 18px 80px rgba(57,106,155,.18),0 0 0 6px rgba(255,255,255,.55);isolation:isolate;transform:translateY(14px) scale(.985);opacity:0} .poster-container.reveal{animation:posterAppear 1.5s cubic-bezier(.2,.8,.2,1) forwards} @keyframes posterAppear{0%{opacity:0;transform:translateY(12px) scale(.985);filter:brightness(1.2)}35%{opacity:1}100%{opacity:1;transform:none;filter:none}}
+.poster{width:100%;height:auto} .poster-container::after{content:"";position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none} .poster-container.reveal::after{animation:whiteFade 2.3s ease-in-out forwards} @keyframes whiteFade{0%{opacity:1}20%{opacity:.93}58%{opacity:.36}100%{opacity:0}}
+.poster-shimmer{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 0 40%,rgba(255,255,255,.09) 47%,transparent 53% 100%);background-size:220% 100%;animation:shimmer 11s ease-in-out infinite} @keyframes shimmer{to{background-position:220% 0}}
+.hotspot{position:absolute;display:block;border-radius:16px;background:transparent;border:2px solid transparent;transition:background .25s ease,border-color .25s ease,transform .25s ease} .hotspot:hover,.hotspot:focus-visible{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.78);transform:scale(1.02)}
+.hotspot.date{left:9%;top:61.5%;width:25.5%;height:8.6%} .hotspot.time{left:37.3%;top:61.5%;width:23.7%;height:8.6%} .hotspot.place{left:63.5%;top:61.5%;width:26.8%;height:8.6%} .hotspot.baby{left:27%;top:31%;width:45%;height:27%} .hotspot.liverpool{left:27.3%;top:79.5%;width:45.4%;height:8.7%}  .hotspot.rsvp{left:22%;top:89.8%;width:57%;height:7.5%}
+
+footer{text-align:center;padding:10px 15px 26px;color:#7c91a4;font-size:12px}
+
+.dialog{position:fixed;inset:0;z-index:1200;display:none;place-items:center;padding:18px;background:rgba(45,76,104,.5);backdrop-filter:blur(9px)} .dialog.open{display:grid} .panel{width:min(100%,580px);max-height:min(88svh,900px);overflow:auto;padding:26px 22px 24px;border-radius:32px;background:linear-gradient(180deg,#fffefb 0%,#edf7ff 100%);border:1px solid rgba(255,255,255,.95);box-shadow:0 26px 70px rgba(34,66,96,.24);position:relative} .close{position:absolute;right:14px;top:12px;width:40px;height:40px;border-radius:50%;background:#fff7ef;color:#7d6490;font-size:28px;line-height:1} .modal-kicker{text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:800;color:#a18658} .panel h2{margin:10px 0 8px;font:700 clamp(28px,5vw,42px)/1.1 'Playfair Display',serif;color:#4d7598} .panel p{margin:0 0 14px;color:#6d8497} .info-grid{display:grid;gap:12px;margin-top:18px} .info-card{padding:16px 16px 15px;border-radius:24px;background:#fff;border:1px solid #f3ede4;box-shadow:var(--shadow)} .info-card strong{display:block;color:#52789c;font-size:18px;margin-bottom:4px} .buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px} .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:999px;font-weight:800} .btn-blue{background:linear-gradient(180deg,#5da2dd,#3f79b3);color:#fff} .btn-cream{background:#fff7eb;color:#567793;border:1px solid #ebd7bc}
+.memory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px} .memory-card{background:#fff;padding:10px;border-radius:22px;box-shadow:var(--shadow)} .memory-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px} .memory-card figcaption{padding:9px 4px 3px;text-align:center;color:#6785a2;font-size:14px} .video-box{margin-top:14px;border-radius:22px;overflow:hidden;background:#fff;box-shadow:var(--shadow);display:none} .video-box.show{display:block} .video-box video{width:100%;display:block}
+.form-grid{display:grid;gap:12px;margin-top:14px} .field{text-align:left} .field label{display:block;margin:0 0 6px;color:#5f7c95;font-size:14px;font-weight:800} .field input,.field select,.field textarea{width:100%;padding:12px 14px;border-radius:18px;border:1px solid #dfe8f0;background:#fff;color:#45657e} .field textarea{min-height:90px;resize:vertical} .outcome{display:none;margin-top:14px;padding:14px;border-radius:20px;background:#fff;border:1px solid #ecdfcd} .outcome.show{display:block} .outcome pre{white-space:pre-wrap;font:600 14px/1.45 'Nunito',sans-serif;color:#4c6c87;margin:0} .tiny{font-size:12px;color:#7e92a6;margin-top:10px}
+@media (max-width:640px){.hero-badge{font-size:12px} .panel{padding:24px 18px 20px;border-radius:28px} .memory-grid{grid-template-columns:1fr} .hotspot{border-radius:12px} }
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}}
+
+/* Accesos visibles dentro de la imagen para ultrasonidos y video */
+.media-tag{position:absolute;top:3.2%;z-index:4;display:flex;align-items:center;gap:8px;padding:10px 14px;border:1.5px solid rgba(255,255,255,.95);border-radius:999px;color:#52769c;font-size:clamp(12px,2.2vw,14px);font-weight:800;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(255,246,251,.84) 54%,rgba(232,244,255,.93));box-shadow:0 9px 25px rgba(77,117,152,.13),inset 0 1px 0 #fff;transition:transform .22s ease,box-shadow .22s ease;max-width:41%}
+.media-tag.left{left:3.5%}
+.media-tag.right{right:3.5%}
+.media-tag:hover,.media-tag:focus-visible{transform:translateY(-3px);box-shadow:0 13px 29px rgba(77,117,152,.2),inset 0 1px 0 #fff}
+.media-tag:active{transform:translateY(1px)}
+.media-icon{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;color:#b8894b;background:#fff5df;box-shadow:0 2px 6px rgba(166,132,80,.11)}
+.media-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.media-tag .desc{line-height:1.15;text-align:left}
+.media-tag .desc small{display:block;font-size:10px;letter-spacing:.04em;color:#9c8158;text-transform:uppercase;margin-bottom:2px}
+.video-box.always-open{display:block;margin:20px 0 0}
+.video-panel{width:min(100%,680px)} .video-panel video{max-height:55svh;object-fit:contain;background:#171d29}
+@media(max-width:640px){.media-tag{top:2.8%;padding:8px 10px;gap:6px;max-width:44%}.media-icon{width:26px;height:26px}.media-icon svg{width:15px;height:15px}.media-tag .desc{font-size:11px}.media-tag .desc small{font-size:9px}}
+@media(max-width:380px){.media-tag{padding:7px 8px;max-width:46%}.media-tag .desc{font-size:10px}}
+.phone-note{display:block;margin-top:6px;color:#a17867;font-size:14px;font-weight:800}
+</style>
+</head>
+<body class="no-scroll">
+<div class="page-sky" aria-hidden="true"></div>
+<div id="stars" aria-hidden="true"></div>
+<audio id="music" preload="none" loop><source src="assets/musica.mp3"></audio>
+<button id="musicToggle" type="button" aria-pressed="false"><span class="note">♪</span><span id="musicLabel">Música</span></button>
+
+<div id="opening" role="dialog" aria-modal="true" aria-label="Abrir invitación">
+  <div class="door left" aria-hidden="true"><span class="crest">❦</span></div>
+  <div class="door right" aria-hidden="true"><span class="crest">❦</span></div>
+  <div class="open-card"><span class="crown">♛</span><div class="open-kicker">Una sorpresa muy especial</div><h1>¡Nuestro pequeño emperador está por llegar!</h1><p>Las puertas se abren para descubrir una invitación tierna, breve y llena de amor.</p><button id="openInvite" class="open-button" type="button">✦ Abrir invitación ✦</button></div>
+</div>
+
+<main id="mainContent" tabindex="-1" aria-hidden="true">
+  <section class="hero" aria-label="Invitación principal del baby shower de César Augusto">
+    <div class="hero-badge">☁︎ &nbsp; Toca los detalles dentro de la ilustración</div>
+    <div class="poster-container" id="cover">
+      <img class="poster" src="assets/portada_cesar_augusto.png" alt="Invitación ilustrada del baby shower de César Augusto con un bebé romano tierno, fecha 21 de noviembre de 2026, 1:00 p. m., Casa de mis tíos David y Mariana, mesa de regalos de Liverpool y botón de confirmación de asistencia.">
+      <div class="poster-shimmer" aria-hidden="true"></div>
+      <button class="media-tag left" type="button" data-modal="memoryModal" aria-label="Ver ultrasonidos en imágenes"><span class="media-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="1.5"/><path d="m4.5 18 5.5-6 3.7 3.7 2.8-2.8L21 17"/></svg></span><span class="desc"><small>Recuerdo</small>Ver ultrasonidos</span></button>
+      <button class="media-tag right" type="button" data-modal="videoModal" aria-label="Ver video del ultrasonido"><span class="media-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="4"/><path d="m10 8 6 4-6 4z"/></svg></span><span class="desc"><small>Momento especial</small>Ver video</span></button>
+      <button class="hotspot baby" type="button" data-modal="memoryModal" aria-label="Abrir recuerdos y ultrasonido"><span class="sr-only">Abrir recuerdos y ultrasonido</span></button>
+      <button class="hotspot date" type="button" data-modal="eventModal" aria-label="Ver fecha del evento"><span class="sr-only">Ver fecha</span></button>
+      <button class="hotspot time" type="button" data-modal="eventModal" aria-label="Ver hora del evento"><span class="sr-only">Ver hora</span></button>
+      <a class="hotspot place" href="https://www.google.com/maps/place/19%C2%B037'44.5%22N+99%C2%B009'34.4%22W/@19.629022,-99.1621165,17z/data=!3m1!4b1!4m4!3m3!8m2!3d19.629022!4d-99.1595416?hl=es&entry=ttu&g_ep=EgoyMDI2MTAxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Abrir ubicación en Google Maps"><span class="sr-only">Abrir ubicación</span></a>
+      <a class="hotspot liverpool" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/60063411" target="_blank" rel="noopener noreferrer" aria-label="Abrir mesa de regalos Liverpool"><span class="sr-only">Mesa Liverpool</span></a>
+      <button class="hotspot rsvp" type="button" data-modal="rsvpModal" aria-label="Confirmar asistencia"><span class="sr-only">Confirmar asistencia</span></button>
+    </div>
+  </section>
+</main>
+
+<div class="dialog" id="eventModal" role="dialog" aria-modal="true" aria-labelledby="eventTitle" aria-hidden="true">
+  <div class="panel">
+    <button class="close" type="button" data-close-dialog aria-label="Cerrar">×</button>
+    <div class="modal-kicker">Nuestro gran día</div>
+    <h2 id="eventTitle">Los detalles del baby shower</h2>
+    <p>Una celebración llena de cariño para recibir a nuestro pequeño emperador.</p>
+    <div class="info-grid">
+      <div class="info-card"><strong>21 de noviembre de 2026</strong><span>Sábado, preparado con mucho amor</span></div>
+      <div class="info-card"><strong>1:00 p. m.</strong><span>Te esperamos puntualmente para compartir este momento especial</span></div>
+      <div class="info-card"><strong>Casa de mis tíos David y Mariana</strong><span>La ubicación exacta ya está lista para abrirse en Google Maps</span></div>
+    </div>
+    <div class="buttons">
+      <a class="btn btn-blue" href="https://www.google.com/maps/place/19%C2%B037'44.5%22N+99%C2%B009'34.4%22W/@19.629022,-99.1621165,17z/data=!3m1!4b1!4m4!3m3!8m2!3d19.629022!4d-99.1595416?hl=es&entry=ttu&g_ep=EgoyMDI2MTAxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">⌖ Abrir ubicación</a>
+      <button class="btn btn-cream" type="button" id="addCalendar">▦ Agregar al calendario</button>
+    </div>
+  </div>
+</div>
+
+<div class="dialog" id="memoryModal" role="dialog" aria-modal="true" aria-labelledby="memoryTitle" aria-hidden="true">
+  <div class="panel">
+    <button class="close" type="button" data-close-dialog aria-label="Cerrar">×</button>
+    <div class="modal-kicker">Nuestro pequeño milagro</div>
+    <h2 id="memoryTitle">Sus primeros ultrasonidos</h2>
+    <p>Antes de conocer su sonrisa, ya nos emociona cada pequeño latido.</p>
+    <div class="memory-grid">
+      <figure class="memory-card"><img src="assets/recuerdo_05.jpg" alt="Ultrasonido de César Augusto"><figcaption>Nuestro pequeño milagro</figcaption></figure>
+      <figure class="memory-card"><img src="assets/recuerdo_06.jpg" alt="Otro ultrasonido de César Augusto"><figcaption>Una vida llena de ilusión</figcaption></figure>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="dialog" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoTitle" aria-hidden="true">
+  <div class="panel video-panel">
+    <button class="close" type="button" data-close-dialog aria-label="Cerrar video">×</button>
+    <div class="modal-kicker">Un momento muy especial</div>
+    <h2 id="videoTitle">El primer vistazo a César Augusto</h2>
+    <p>Una pequeña vida que ya llena nuestro corazón.</p>
+    <div class="video-box always-open"><video id="ultraVideo" controls playsinline preload="metadata" poster="assets/recuerdo_05.jpg"><source src="assets/ultrasonido.mp4" type="video/mp4">Tu navegador no admite este video.</video></div>
+  </div>
+</div>
+
+<div class="dialog" id="rsvpModal" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle" aria-hidden="true">
+  <div class="panel">
+    <button class="close" type="button" data-close-dialog aria-label="Cerrar">×</button>
+    <div class="modal-kicker">Confirmación de asistencia</div>
+    <h2 id="rsvpTitle">¿Nos acompañas?</h2>
+    <p>Completa tus datos y abre el mensaje listo para enviarlo por WhatsApp al <strong>55 7301 2973</strong>.<span class="phone-note">Este es el número de mi Abuelita Male</span></p>
+    <form id="rsvpForm" class="form-grid">
+      <div class="field"><label for="nombre">Nombre o familia</label><input id="nombre" name="nombre" required placeholder="Ej. Familia López"></div>
+      <div class="field"><label for="asistencia">Respuesta</label><select id="asistencia" name="asistencia" required><option value="">Selecciona una opción</option><option>Sí asistiré</option><option>No podré asistir</option></select></div>
+      <div class="field"><label for="personas">Número de asistentes</label><select id="personas" name="personas"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+      <div class="field"><label for="mensaje">Mensaje adicional (opcional)</label><textarea id="mensaje" name="mensaje" placeholder="Con mucho cariño..."></textarea></div>
+      <div class="buttons"><button class="btn btn-blue" type="submit">Preparar mensaje</button></div>
+    </form>
+    <div class="outcome" id="formOutcome">
+      <pre id="confirmationMessage"></pre>
+      <div class="buttons">
+        <a class="btn btn-blue" id="sendWhatsapp" href="#" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
+        <button class="btn btn-cream" id="copyConfirmation" type="button">Copiar mensaje</button>
+      </div>
+      <div class="tiny">El mensaje se abre listo para enviarse al WhatsApp de confirmación.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(()=>{
+  const $ = (s,p=document)=>p.querySelector(s);
+  const $$ = (s,p=document)=>Array.from(p.querySelectorAll(s));
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // stars
+  const stars = $('#stars');
+  const chars = ['✦','✧','⋆','✩'];
+  for(let i=0;i<24;i++){
+    const s=document.createElement('span');
+    s.className='star';
+    s.textContent=chars[i%chars.length];
+    s.style.left=(Math.random()*100)+'%';
+    s.style.top=(Math.random()*100)+'%';
+    s.style.fontSize=(12+Math.random()*14)+'px';
+    s.style.setProperty('--tw',(3.4+Math.random()*3).toFixed(2)+'s');
+    s.style.setProperty('--fl',(8+Math.random()*6).toFixed(2)+'s');
+    stars.appendChild(s);
+  }
+
+  // music toggle
+  const music = $('#music'); const toggle = $('#musicToggle'); const label = $('#musicLabel');
+  async function setMusic(play){
+    try{
+      if(play){await music.play(); toggle.setAttribute('aria-pressed','true'); label.textContent='Música encendida';}
+      else{music.pause(); toggle.setAttribute('aria-pressed','false'); label.textContent='Música';}
+    }catch(e){ toggle.setAttribute('aria-pressed','false'); label.textContent='Música'; }
+  }
+  toggle.addEventListener('click',()=>setMusic(music.paused));
+
+  // opening
+  const opening = $('#opening'); const main = $('#mainContent'); const cover = $('#cover');
+  $('#openInvite').addEventListener('click', ()=>{
+    if(opening.classList.contains('open'))return;
+    opening.classList.add('open');
+    main.setAttribute('aria-hidden','false');
+    setTimeout(()=>{ main.classList.add('visible'); cover.classList.add('reveal'); opening.classList.add('gone'); document.body.classList.remove('no-scroll'); main.focus({preventScroll:true}); }, reduced ? 20 : 1900);
+    void setMusic(true);
+  });
+
+  // modals
+  let lastTrigger = null;
+  let resumeMusicAfterVideo = false;
+  function openModal(id, trigger){
+    const modal = document.getElementById(id);
+    if(!modal) return;
+    lastTrigger = trigger || document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('no-scroll');
+    if (id === 'videoModal') {
+      resumeMusicAfterVideo = !music.paused;
+      if (resumeMusicAfterVideo) music.pause();
+      const vid = $('#ultraVideo');
+      vid.currentTime = 0;
+      void vid.play().catch(() => {}); // En iOS el usuario puede pulsar Reproducir en el reproductor
+    }
+    const focusTarget = modal.querySelector('.close, button, a, input, select, textarea');
+    if(focusTarget) focusTarget.focus();
+  }
+  function closeModal(modal){
+    if (modal.id === 'videoModal') {
+      const vid = $('#ultraVideo');
+      vid.pause();
+      vid.currentTime = 0;
+      if(resumeMusicAfterVideo) { void setMusic(true); resumeMusicAfterVideo = false; }
+    }
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    if(!opening.classList.contains('gone')) return;
+    document.body.classList.remove('no-scroll');
+    if(lastTrigger) lastTrigger.focus();
+  }
+  $$('[data-modal]').forEach(el=>el.addEventListener('click',()=>openModal(el.getAttribute('data-modal'), el)));
+  $$('[data-close-dialog]').forEach(btn=>btn.addEventListener('click',()=>closeModal(btn.closest('.dialog'))));
+  $$('.dialog').forEach(m=>{
+    m.addEventListener('click',e=>{ if(e.target===m) closeModal(m); });
+    m.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(m); });
+  });
+
+  // RSVP
+  let currentConfirmation='';
+  $('#rsvpForm').addEventListener('submit', e=>{
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    let asistentes = Number(data.get('personas')||0) || 0;
+    const respuesta = String(data.get('asistencia')||'').trim();
+    if(respuesta==='No podré asistir') asistentes = 0;
+    currentConfirmation = `Hola, quiero confirmar mi asistencia al Baby Shower de César Augusto.
+
+Nombre / familia: ${String(data.get('nombre')||'').trim()}
+Respuesta: ${respuesta}
+Número de asistentes: ${asistentes}${String(data.get('mensaje')||'').trim()?`
+Mensaje: ${String(data.get('mensaje')).trim()}`:''}
+
+¡Gracias por la invitación!`;
+    $('#confirmationMessage').textContent = currentConfirmation;
+    $('#sendWhatsapp').href = 'https://wa.me/525573012973?text=' + encodeURIComponent(currentConfirmation);
+    $('#formOutcome').classList.add('show');
+  });
+  $('#copyConfirmation').addEventListener('click', async e=>{
+    if(!currentConfirmation) return;
+    try{ await navigator.clipboard.writeText(currentConfirmation); e.currentTarget.textContent='✓ Mensaje copiado'; }
+    catch(err){ const ta=document.createElement('textarea'); ta.value=currentConfirmation; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); e.currentTarget.textContent='✓ Mensaje copiado'; }
+  });
+
+  // Calendar
+  $('#addCalendar').addEventListener('click',()=>{
+    const ics = [
+      'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Cesar Augusto//Invitacion Compacta//ES',
+      'BEGIN:VEVENT','UID:cesar-augusto-babyshower-20261121','DTSTAMP:20261020T180000Z',
+      'DTSTART:20261121T190000Z','DTEND:20261121T220000Z',
+      'SUMMARY:Baby Shower de César Augusto',
+      'DESCRIPTION:Celebración del baby shower de César Augusto',
+      'LOCATION:Casa de mis tíos David y Mariana - ubicación en Google Maps',
+      'END:VEVENT','END:VCALENDAR'
+    ].join('\r\n');
+    const url = URL.createObjectURL(new Blob([ics],{type:'text/calendar;charset=utf-8'}));
+    const a = document.createElement('a'); a.href=url; a.download='Baby_Shower_Cesar_Augusto.ics'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(url),1000);
+  });
+})();
+</script>
+</body>
+</html>

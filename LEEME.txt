@@ -1,0 +1,6 @@
+Baby Shower César Augusto — Versión corta corregida.
+
+Para publicar en GitHub Pages: subir index.html, .nojekyll y la carpeta assets a la raíz del repositorio cesar-augusto, reemplazando el index.html anterior.
+
+El botón Abrir invitación activa las puertas y el fundido blanco hacia la portada.
+Los botones en la portada abren fecha, hora, Google Maps, mesas Liverpool/, ultrasonidos y confirmación por WhatsApp 55 7301 2973.
